@@ -150,7 +150,8 @@ public class BookingController {
                 booking.getBookingDate(),
                 booking.getAddress(),
                 booking.getIssueDescription(),
-                booking.getStatus()
+                booking.getStatus(),
+                booking.getUser() != null ? booking.getUser().getMobileNumber() : null
         );
     }
 }

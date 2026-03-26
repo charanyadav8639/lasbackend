@@ -41,6 +41,7 @@ public class UserController {
         user.setName(request.getName());
         user.setEmail(request.getEmail());
         user.setPassword(request.getPassword());
+        user.setMobileNumber(request.getMobileNumber());
         
         // Single admin constraint
         String MASTER_ADMIN_EMAIL = "charanyadav863931@gmail.com";
@@ -69,6 +70,6 @@ public class UserController {
     }
 
     private UserResponseDTO toDto(User user){
-        return new UserResponseDTO(user.getId(), user.getName(), user.getEmail(), user.getRole());
+        return new UserResponseDTO(user.getId(), user.getName(), user.getEmail(), user.getRole(), user.getMobileNumber());
     }
 }

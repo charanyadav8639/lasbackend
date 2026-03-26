@@ -29,7 +29,7 @@ public class UserService {
 user.setRole(requestDTO.getRole());
 
         User saved = userRepository.save(user);
-        return new UserResponseDTO(saved.getId(), saved.getName(), saved.getEmail(), saved.getRole());
+        return new UserResponseDTO(saved.getId(), saved.getName(), saved.getEmail(), saved.getRole(), saved.getMobileNumber());
     }
 
     public UserResponseDTO login(LoginRequestDTO requestDTO) {
@@ -40,7 +40,7 @@ user.setRole(requestDTO.getRole());
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid credentials");
         }
 
-        return new UserResponseDTO(user.getId(), user.getName(), user.getEmail(), user.getRole());
+        return new UserResponseDTO(user.getId(), user.getName(), user.getEmail(), user.getRole(), user.getMobileNumber());
     }
 }
 

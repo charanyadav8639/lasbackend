@@ -15,11 +15,13 @@ public class BookingResponseDTO {
     private String address;
     private String issueDescription;
     private BookingStatus status;
+    private String customerMobileNumber;
     
     // constructors
     public BookingResponseDTO(Long id, Long userId, Long providerId, Long serviceId, Long workerId,
                               String serviceName, String workerName,
-                              LocalDateTime bookingDate, String address, String issueDescription, BookingStatus status) {
+                              LocalDateTime bookingDate, String address, String issueDescription, BookingStatus status,
+                              String customerMobileNumber) {
         this.id = id;
         this.userId = userId;
         this.providerId = providerId;
@@ -31,6 +33,7 @@ public class BookingResponseDTO {
         this.address = address;
         this.issueDescription = issueDescription;
         this.status = status;
+        this.customerMobileNumber = customerMobileNumber;
     }
     
     // getters and setters
@@ -66,4 +69,7 @@ public class BookingResponseDTO {
     
     public BookingStatus getStatus() { return status; }
     public void setStatus(BookingStatus status) { this.status = status; }
+    
+    public String getCustomerMobileNumber() { return customerMobileNumber; }
+    public void setCustomerMobileNumber(String customerMobileNumber) { this.customerMobileNumber = customerMobileNumber; }
 }

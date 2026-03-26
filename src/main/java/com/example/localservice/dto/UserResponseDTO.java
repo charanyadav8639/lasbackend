@@ -7,13 +7,15 @@ public class UserResponseDTO {
     private String name;
     private String email;
     private Role role;
+    private String mobileNumber;
     
     // constructors
-    public UserResponseDTO(Long id, String name, String email, Role role) {
+    public UserResponseDTO(Long id, String name, String email, Role role, String mobileNumber) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.role = role;
+        this.mobileNumber = mobileNumber;
     }
     
     // getters and setters
@@ -28,4 +30,7 @@ public class UserResponseDTO {
     
     public Role getRole() { return role; }
     public void setRole(Role role) { this.role = role; }
+    
+    public String getMobileNumber() { return mobileNumber; }
+    public void setMobileNumber(String mobileNumber) { this.mobileNumber = mobileNumber; }
 }

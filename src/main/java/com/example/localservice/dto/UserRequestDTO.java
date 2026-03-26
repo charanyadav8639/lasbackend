@@ -19,6 +19,8 @@ public class UserRequestDTO {
     @NotNull(message = "Role is required")
     private Role role;
     
+    private String mobileNumber;
+    
     // getters and setters
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
@@ -31,4 +33,7 @@ public class UserRequestDTO {
     
     public Role getRole() { return role; }
     public void setRole(Role role) { this.role = role; }
+    
+    public String getMobileNumber() { return mobileNumber; }
+    public void setMobileNumber(String mobileNumber) { this.mobileNumber = mobileNumber; }
 }
