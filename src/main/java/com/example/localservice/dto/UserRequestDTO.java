@@ -19,6 +19,7 @@ public class UserRequestDTO {
     @NotNull(message = "Role is required")
     private Role role;
     
+    @NotBlank(message = "Mobile number is required")
     private String mobileNumber;
     
     // getters and setters

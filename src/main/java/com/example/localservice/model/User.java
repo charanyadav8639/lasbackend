@@ -25,7 +25,7 @@ public class User {
     @Column(nullable = false)
     private String password;
     
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String mobileNumber;
     
     @Enumerated(EnumType.STRING)
